@@ -8,9 +8,11 @@
 class Solution {
 public:
   std::string PrintHelloWorld();
-  int FindMin();
-  int FindMax();
-  int FindMedian();
+  int Min(std::vector<int> &inputs);
+  int Max(std::vector<int> &inputs);
+  std::vector<int> Sort(std::vector<int> &inputs);
+  double FindMedian(std::vector<int> &inputs);
+  std::string PrintList(std::vector<int> &inputs);
 };
 
 #endif
