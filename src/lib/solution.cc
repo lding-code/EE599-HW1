@@ -5,7 +5,7 @@
 #include <iostream>
 
 std::string Solution::PrintHelloWorld() { 
-  return "**** Hello World ****"; 
+  return "**** Hello World ****\nMy Name is Lei\nMy major is EE\n"; 
 }
 
 int Solution::Min(std::vector<int> &inputs) {
