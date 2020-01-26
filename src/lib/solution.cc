@@ -60,19 +60,22 @@ double Solution::FindMedian(std::vector<int> &inputs) {
   // if the number of elements is even (median is the average of the two middle numbers)
   if (sortedInputs.size() % 2 == 0) {
     // return average of the two middle numbers
-    return (sortedInputs[sortedInputs.size() / 2] + sortedInputs[sortedInputs.size() / 2 + 1]) / 2;
+    return (sortedInputs[sortedInputs.size() / 2 - 1] + sortedInputs[sortedInputs.size() / 2]) / 2;
   }
   // if the number of elements is odd
   else {
     // return the midle number of the list
-    return sortedInputs[(sortedInputs.size() + 1) / 2];
+    return sortedInputs[(sortedInputs.size() - 1) / 2];
   }
 }
 
-std::string display(std::vector <int> &inputs) {
+std::string Solution::PrintList(std::vector <int> &inputs) {
   std::string listStr= "";
   for (auto n : inputs) {
     listStr += std::to_string(n);
+    listStr += ", ";
   }
+  listStr.pop_back();
+  listStr.pop_back();
   return listStr;
 }
