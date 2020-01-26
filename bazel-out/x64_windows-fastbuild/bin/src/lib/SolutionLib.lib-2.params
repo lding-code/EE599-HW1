@@ -1,5 +1,0 @@
-/nologo
-/OUT:bazel-out/x64_windows-fastbuild/bin/src/lib/SolutionLib.lib
-/MACHINE:X64
-bazel-out/x64_windows-fastbuild/bin/src/lib/_objs/SolutionLib/solution.obj
-/ignore:4221
