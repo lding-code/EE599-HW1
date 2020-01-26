@@ -1,0 +1,9 @@
+/nologo
+/OUT:bazel-out/x64_windows-fastbuild/bin/src/main/main.exe
+bazel-out/x64_windows-fastbuild/bin/src/main/_objs/main/main.obj
+bazel-out/x64_windows-fastbuild/bin/src/lib/SolutionLib.lib
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrt.lib
+/DEBUG:FASTLINK
+/INCREMENTAL:NO
