@@ -79,3 +79,36 @@ std::string Solution::PrintList(std::vector <int> &inputs) {
   listStr.pop_back();
   return listStr;
 }
+
+int Solution::Factorial(int n) {
+  if (n < 0) {
+    return -1;
+  }
+  else if (n == 0) {
+    return 0;
+  }
+  else {
+    int m = n;
+    for (n--; n > 0; n--) {
+      m *= n;
+    }
+    return m;
+  }
+}
+
+int Solution::FactorialRec(int n) {
+  if (n < 0) {
+    return -1;
+  }
+  else if (n == 0) {
+    return 0;
+  }
+  else {
+    if (n > 1) {
+      return n * FactorialRec(n  -1);
+    }
+    else {
+      return 1;
+    }
+  }
+}

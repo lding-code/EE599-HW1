@@ -13,5 +13,10 @@ int main()
     std::cout << "Median = " << solution.FindMedian(testList) << std::endl;
     std::cout << "Sorted list:   " << solution.PrintList(testList) << std::endl;
 
+    int n = 6;
+
+    std::cout << "Factorial(" << n << ") = " << solution.Factorial(n) << std::endl;
+    std::cout << "FactorialRec(" << n << ") = " << solution.FactorialRec(n) << std::endl;
+
     return EXIT_SUCCESS;
 }

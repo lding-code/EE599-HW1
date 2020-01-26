@@ -13,6 +13,8 @@ public:
   std::vector<int> Sort(std::vector<int> &inputs);
   double FindMedian(std::vector<int> &inputs);
   std::string PrintList(std::vector<int> &inputs);
+  int Factorial(int n);
+  int FactorialRec(int n);
 };
 
 #endif
