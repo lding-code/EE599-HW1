@@ -1,6 +1,9 @@
 # Bazel files:
 **/bazel-*
 
+# Mac OS finder files:
+.DS_Store
+
 # Prerequisites
 *.d
 
