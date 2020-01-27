@@ -6,41 +6,148 @@
 TEST(HelloWorldShould, ReturnHelloWorld) {
   Solution solution;
 
-  std::vector<int> list1 = {2,2,2};
-  std::vector<int> list2 = {5, 3, 9, 7};
-  std::vector<int> list3 = {5, 3, 9, 7, 2};
-  std::vector<int> list4 = {-4, -2, 0, 2};
-  std::vector<int> list5 = {-4, -2, 0, 2, 1};
-
-  std::string actual0 = solution.PrintHelloWorld();
-  std::string expected0 = "**** Hello World ****";
+  std::string actual = solution.PrintHelloWorld();
+  std::string expected = "**** Hello World ****\nMy Name is Lei\nMy major is EE\n";
   
-  EXPECT_EQ(expected0, actual0);
+  EXPECT_EQ(expected, actual);
+}
 
-  double actual1 = solution.FindMedian(list1);
-  double expected1 = 2;
+// Solution::FindMedian Test1: same numbers 
+TEST(FindMedianShould0, ReturnFindMedian0) {
+  Solution solution;
 
-  EXPECT_EQ(expected1, actual1);
+  std::vector<int> list = {2,2,2};
 
-  double actual2 = solution.FindMedian(list2);
-  double expected2 = 6;
+  double actual = solution.FindMedian(list);
+  double expected = 2;
 
-  EXPECT_EQ(expected2, actual2);
+  EXPECT_EQ(expected, actual);
+}
 
-  std::cout << solution.PrintList(list3) << std::endl;
+// Solution::FindMedian Test2: even number of elements 
+TEST(FindMedianShould1, ReturnFindMedian1) {
+  Solution solution;
 
-  double actual3 = solution.FindMedian(list3);
-  double expected3 = 5;
+  std::vector<int> list = {5, 3, 9, 7};
 
-  EXPECT_EQ(expected3, actual3);
+  double actual = solution.FindMedian(list);
+  double expected = 6;
 
-  double actual4 = solution.FindMedian(list4);
-  double expected4 = -1;
+  EXPECT_EQ(expected, actual);
+}
 
-  EXPECT_EQ(expected4, actual4);
+// Solution::FindMEdian Test3: odd number of elements 
+TEST(FindMedianShould2, ReturnFindMedian2) {
+  Solution solution;
 
-  double actual5 = solution.FindMedian(list5);
-  double expected5 = 0;
+  std::vector<int> list = {5, 3, 9, 7, 2};
 
-  EXPECT_EQ(expected5, actual5);
+  double actual = solution.FindMedian(list);
+  double expected = 5;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FindMEdian Test4: involving negative numbers
+TEST(FindMedianShould3, ReturnFindMedian3) {
+  Solution solution;
+
+  std::vector<int> list = {-4, -2, 0, 2};
+
+  double actual = solution.FindMedian(list);
+  double expected = -1;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FindMEdian Test5: one more with negative numbers
+TEST(FindMedianShould4, ReturnFindMedian4) {
+  Solution solution;
+
+  std::vector<int> list = {-4, -2, 0, 2, 1};
+
+  double actual = solution.FindMedian(list);
+  double expected = 0;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::Factorial Test1: n = -2
+TEST(FactorialShould0, ReturnFactorial0) {
+  Solution solution;
+
+  int actual = solution.Factorial(-2);
+  int expected = -1;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::Factorial Test2: n = 0
+TEST(FactorialShould1, ReturnFactorial1) {
+  Solution solution;
+
+  int actual = solution.Factorial(0);
+  int expected = 0;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::Factorial Test3: n = 1
+TEST(FactorialShould2, ReturnFactorial2) {
+  Solution solution;
+
+  int actual = solution.Factorial(1);
+  int expected = 1;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::Factorial Test4: n = 3
+TEST(FactorialShould3, ReturnFactorial3) {
+  Solution solution;
+
+  int actual = solution.Factorial(3);
+  int expected = 6;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FactorialRec Test1: n = -2
+TEST(FactorialRecShould0, ReturnFactorialRec0) {
+  Solution solution;
+
+  int actual = solution.FactorialRec(-2);
+  int expected = -1;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FactorialRec Test2: n = 0
+TEST(FactorialRecShould1, ReturnFactorialRec1) {
+  Solution solution;
+
+  int actual = solution.FactorialRec(0);
+  int expected = 0;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FactorialRec Test3: n = 1
+TEST(FactorialRecShould2, ReturnFactorialRec2) {
+  Solution solution;
+
+  int actual = solution.FactorialRec(1);
+  int expected = 1;
+
+  EXPECT_EQ(expected, actual);
+}
+
+// Solution::FactorialRec Test4: n = 3
+TEST(FactorialRecShould3, ReturnFactorialRec3) {
+  Solution solution;
+
+  int actual = solution.FactorialRec(3);
+  int expected = 6;
+
+  EXPECT_EQ(expected, actual);
 }
